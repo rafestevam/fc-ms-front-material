@@ -1,0 +1,41 @@
+<mat-nav-list>
+    <a mat-list-item routerLink="." (click)="onCloseSidenav()">
+        <mat-icon mat-list-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+    </a>
+    <a mat-list-item routerLink="." (click)="onCloseSidenav()">
+        <mat-icon mat-list-icon>fireplace</mat-icon>
+        <span>Projetos</span>
+    </a>
+    <a mat-list-item routerLink="." (click)="onCloseSidenav()">
+        <mat-icon mat-list-icon>group</mat-icon>
+        <span>Times</span>
+    </a>
+    <mat-divider></mat-divider>
+    <div mat-subheader>Administrador</div>
+    <a mat-list-item routerLink="." (click)="onCloseSidenav()">
+        <mat-icon mat-list-icon>face</mat-icon>
+        <span>Usuários</span>
+    </a>
+    <a mat-list-item routerLink="." (click)="onCloseSidenav()">
+        <mat-icon mat-list-icon>build</mat-icon>
+        <span>Sistema</span>
+    </a>
+    <div fxHide fxHide.xs="false">
+        <mat-divider></mat-divider>
+        <div mat-subheader>Infos Pessoais</div>
+        <a mat-list-item routerLink="." (click)="onCloseSidenav()"> 
+            <mat-icon mat-list-icon>perm_identity</mat-icon>
+            <span>Meu Perfil</span>
+        </a>
+        <a mat-list-item routerLink="." (click)="onCloseSidenav()">
+            <mat-icon mat-list-icon>settings</mat-icon>
+            <span>Configurações</span>
+        </a>
+        <a mat-list-item routerLink="." (click)="onCloseSidenav()">
+            <mat-icon mat-list-icon>power_settings_new</mat-icon>
+            <span>Log-Out</span>
+        </a>
+    </div>
+
+</mat-nav-list>

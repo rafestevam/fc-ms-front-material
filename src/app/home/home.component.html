@@ -1,0 +1,39 @@
+<div fxFlex="100%" fxLayout="row" fxLayout.xs="column" class="login-container"> 
+  <div fxFlex="35%" fxFlex.xs="50%" gdAlignColumns="center">
+    <!-- <mat-toolbar color="primary">
+      <mat-toolbar-row>Login</mat-toolbar-row>
+    </mat-toolbar>
+    <form fxLayout="column" #f="ngForm" fxLayoutGap="10px">
+      <mat-form-field>
+        <input type="email" matInput placeholder="Seu Email" ngModel name="email" #emailInput="ngModel" email required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="Sua senha" ngModel name="password" #pwdInput="ngModel" required minlength="6">
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Log-In</button>
+    </form> -->
+
+    <mat-card>
+      <mat-card-title>
+        <mat-toolbar color="primary">
+          Login
+        </mat-toolbar>
+      </mat-card-title>
+      <mat-card-subtitle>Rockambole FinCollab :: Finanças Colaborativas</mat-card-subtitle>
+      <mat-card-content>
+        <form fxLayout="column" #f="ngForm">
+          <mat-form-field>
+            <input type="email" matInput placeholder="Seu Email" ngModel name="email" #emailInput="ngModel" email required>
+          </mat-form-field>
+          <mat-form-field>
+            <input type="password" matInput placeholder="Sua senha" ngModel name="password" #pwdInput="ngModel" required minlength="6">
+          </mat-form-field>
+          <button type="submit" mat-raised-button color="primary">Log-In</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+  </div> 
+  <div fxFlex="65%" fxHide.xs="true" style="background-image: url(assets/img/covers/rckb-cover.jpg); background-position: center;">
+  </div> 
+</div>

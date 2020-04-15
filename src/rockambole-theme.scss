@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$rokambole-theme-primary: mat-palette($mat-pink, A200);
+$rokambole-theme-accent:  mat-palette($mat-blue-grey, 800);
+$rokambole-theme-warn: mat-palette($mat-purple, 400);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$rokambole-theme: mat-light-theme($rokambole-theme-primary, $rokambole-theme-accent, $rokambole-theme-warn);
+
+@include angular-material-theme($rokambole-theme);
