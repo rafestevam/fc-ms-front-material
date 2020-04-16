@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalMessageService } from '../shared/components/modal-message/modal-message.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mdService: ModalMessageService) { }
 
   ngOnInit(): void {
+  }
+
+  onClick() {
+    this.mdService.openDialog();
   }
 
 }

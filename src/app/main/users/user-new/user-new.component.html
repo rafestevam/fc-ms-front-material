@@ -1,0 +1,26 @@
+<section fxFlex fxLayout class="card-class">
+    <mat-card fxFlex.gt-xs="400px">
+        <mat-card-title>Novo Usuário</mat-card-title>
+        <mat-card-subtitle>Criação de um novo usuário</mat-card-subtitle>
+        <mat-card-content>
+            <p>Campos de Criação do Novo usuario</p>
+            <mat-form-field>
+                <mat-select placeholder="Role">
+                    <mat-option value="admin">
+                        Administrador
+                    </mat-option>
+                    <mat-option value="superuser">
+                        Superusuário
+                    </mat-option>
+                    <mat-option value="collaborator">
+                        Colaborador
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="flex-end">
+            <button mat-button type="submit" color="primary">Criar</button>
+            <button mat-button type="submit" color="accent">Cancelar</button>
+        </mat-card-actions>
+    </mat-card>
+</section>

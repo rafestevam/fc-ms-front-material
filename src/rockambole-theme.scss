@@ -2,11 +2,21 @@
 
 @include mat-core();
 
-$rokambole-theme-primary: mat-palette($mat-pink, A200);
+$rokambole-theme-primary: mat-palette($mat-pink, 100);
 $rokambole-theme-accent:  mat-palette($mat-blue-grey, 800);
-$rokambole-theme-warn: mat-palette($mat-purple, 400);
+$rokambole-theme-warn: mat-palette($mat-purple, 200);
+$rokambole-theme-danger: mat-palette($mat-pink, 400);
+$rokambole-theme-success: mat-palette($mat-purple, 900);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $rokambole-theme: mat-light-theme($rokambole-theme-primary, $rokambole-theme-accent, $rokambole-theme-warn);
 
 @include angular-material-theme($rokambole-theme);
+
+:root {
+    --color-primary: #{mat-color($rokambole-theme-primary)};
+    --color-accent: #{mat-color($rokambole-theme-accent)};
+    --color-warn: #{mat-color($rokambole-theme-warn)};
+    --color-danger: #{mat-color($rokambole-theme-danger)};
+    --color-success: #{mat-color($rokambole-theme-success)};
+}

@@ -1,0 +1,19 @@
+.alert-danger {
+    background: var(--color-danger);
+}
+
+.alert-success { 
+    background: var(--color-success);
+}
+
+.alert-warn {
+    background: var(--color-warn);
+}
+
+.alert-primary {
+    background: var(--color-primary);
+}
+
+.alert-info {
+    background: var(--color-accent);
+}

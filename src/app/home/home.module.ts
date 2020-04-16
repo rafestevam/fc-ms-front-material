@@ -5,8 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomeComponent } from './home.component';
 import { HomeMaterialModule } from './home-material.module';
-
-
+import { ModalMessageModule } from '../shared/components/modal-message/modal-message.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -14,7 +13,8 @@ import { HomeMaterialModule } from './home-material.module';
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-    HomeMaterialModule
+    HomeMaterialModule,
+    ModalMessageModule
   ],
   exports: [HomeComponent]
 })
