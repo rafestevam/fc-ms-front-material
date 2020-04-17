@@ -31,15 +31,15 @@ export class ModalMessageComponent implements OnInit {
   private getModalClass(modalType: ModalType): string{
     switch (modalType) {
       case ModalType.SUCCESS:
-        return 'alert-success';
+        return 'alert alert-success';
       case ModalType.DANGER:
-        return 'alert-danger';
+        return 'alert alert-danger';
       case ModalType.INFO:
-        return 'alert-primary';
+        return 'alert alert-primary';
       case ModalType.WARNING:
-        return 'alert-warning';
+        return 'alert alert-warning';
       default:
-        return 'alert-info';
+        return 'alert alert-info';
     }
   }
 

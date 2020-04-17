@@ -6,7 +6,7 @@
         Dashboard Principal
     </div>
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxLayoutGap="10px">
-        <small fxFlex fxLayout fxLayoutAlign="flex-end center" fxHide.xs="true">Olá, Usuário!</small>
+        <small fxFlex fxLayout fxLayoutAlign="flex-end center" fxHide.xs="true">Olá, {{ name }}!</small>
         <button 
          mat-fab
          fxHide.xs="true"
@@ -22,7 +22,7 @@
                 <mat-icon>settings</mat-icon>
                 <span>Configurações</span>
             </button>
-            <button mat-menu-item>
+            <button mat-menu-item (click)="onLogout()">
                 <mat-icon>power_settings_new</mat-icon>
                 <span>Log-Out</span>
             </button>

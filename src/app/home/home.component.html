@@ -21,14 +21,14 @@
       </mat-card-title>
       <mat-card-subtitle>Rockambole FinCollab :: Finanças Colaborativas</mat-card-subtitle>
       <mat-card-content>
-        <form fxLayout="column" #f="ngForm">
+        <form fxLayout="column" #f="ngForm" (submit)="login(f)">
           <mat-form-field>
             <input type="email" matInput placeholder="Seu Email" ngModel name="email" #emailInput="ngModel" email required>
           </mat-form-field>
           <mat-form-field>
             <input type="password" matInput placeholder="Sua senha" ngModel name="password" #pwdInput="ngModel" required minlength="6">
           </mat-form-field>
-          <button type="submit" mat-raised-button color="primary" (click)="onClick()">Log-In</button>
+          <button type="submit" mat-raised-button color="primary">Log-In</button>
         </form>
       </mat-card-content>
     </mat-card>
