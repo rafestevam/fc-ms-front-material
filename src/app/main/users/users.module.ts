@@ -6,7 +6,6 @@ import { UsersComponent } from './users.component';
 import { UserNewComponent } from './user-new/user-new.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UsersMaterialModule } from './users-material.module';
-import { ProfileService } from 'src/app/core/profile/profile.service';
 
 @NgModule({
   declarations: [UsersComponent, UsersListComponent, UserNewComponent],
@@ -16,6 +15,6 @@ import { ProfileService } from 'src/app/core/profile/profile.service';
     UsersMaterialModule
   ],
   exports: [UsersComponent],
-  providers: [ProfileService]
+  providers: []
 })
 export class UsersModule { }

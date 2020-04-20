@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
 import { MainRoutingModule } from './main-routing.module';
 import { UsersModule } from './users/users.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RequestInterceptor } from '../core/auth/request.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,13 @@ import { UsersModule } from './users/users.module';
     MainMaterialModule,
     MainRoutingModule,
     UsersModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true
+    }
   ]
 })
 export class MainModule { }

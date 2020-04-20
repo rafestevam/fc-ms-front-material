@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/cor
 import { UserService } from 'src/app/core/user/user.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { User } from 'src/app/core/user/user.model';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   @Output() sidenavToggle = new EventEmitter();
-  name: string;
+  user: User;
   private subscription: Subscription;
 
   constructor(
@@ -25,7 +26,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription = this.userService
       .getUser()
-      .subscribe(user => this.name = user.name);
+      .subscribe({
+        next: user => {
+          this.user = user;
+        },
+        error: err => console.log(err)
+      });
   }
 
   onToggleSidenav() {

@@ -1,5 +1,5 @@
 <mat-nav-list>
-    <div mat-subheader fxHide fxHide.xs="false">Olá, {{ name }}!</div>
+    <div mat-subheader fxHide fxHide.xs="false">Olá, {{ user?.profile.name }}!</div>
     <a mat-list-item routerLink="." (click)="onCloseSidenav()">
         <mat-icon mat-list-icon>dashboard</mat-icon>
         <span>Dashboard</span>
